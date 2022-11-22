@@ -1,0 +1,16 @@
+{
+	"C/CPP++ HEADER": {
+		"prefix": "cheader",
+		"body": [
+			"#ifndef ${TM_FILENAME_BASE/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}H",
+			"#define ${TM_FILENAME_BASE/(?:^.*\\\\src\\\\)?(\\w+)(?!\\w*$)|(\\W)|(\\w+)$/${1:/upcase}${2:+_}${3:/upcase}${3:+_}/g}H\n\n",
+			"#ifdef __cplusplus",
+			"extern \"C\"{",
+			 "#endif\n",
+			 "//Place c code here\n\n\n\n",
+			 "#ifdef __cplusplus",
+			 "}",
+			 "#endif\n\n#endif"
+		]
+	}
+}
