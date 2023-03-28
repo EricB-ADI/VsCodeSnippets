@@ -1,0 +1,15 @@
+{
+
+	
+	"wfvar":{
+		"prefix": [
+			"wfvar",
+			"echo"
+		],
+		"body": [
+			"echo \"::set-env name=$0::$$0\""
+		],
+		"description": "Template for creating var for workflow"
+	}
+
+}
